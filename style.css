@@ -1,0 +1,130 @@
+:root {
+    --dark: #2e3440;
+    
+    --c1: #4c566a;
+    --c2: #5e81ac;
+    
+    --left-color: var(--c1);
+    --right-color: var(--c2);
+  }
+  
+  body {  
+    background-color: var(--dark);
+    margin: 0px;
+  }
+  
+  .side {
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+    place-items: center;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .side .title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 7vw;
+    font-weight: 800;
+    margin: 0px 10vw;
+    width: 80vw;
+  }
+  
+  .side .fancy {
+    font-family: "Lobster", cursive;
+    font-size: 1.8em;
+    line-height: 0.6em;
+  }
+  
+  #left-side {
+    background-color: var(--left-color);
+    width: 60%;
+    z-index: 2;
+  }
+  
+  #left-side .title {  
+    color: #ECEFF4;  
+  }
+  
+  #left-side .fancy {
+    color: var(--right-color);
+  }
+  
+  #right-side {
+    background-color: var(--right-color);
+  }
+  
+  #right-side .title {
+    color: var(--dark);
+  }
+  
+  #right-side .fancy {
+    color: #ECEFF4;
+  }
+  #Social {
+    margin-top: 0;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-family: sans-serif;
+    bottom: 0 !important;
+  }
+
+    
+  #main_text {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(3rem, 10vw, 10rem);
+    color: #ECEFF4;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+    transform: translate(20%, 90%);
+  }
+
+  #sec_text {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1rem, 5vw, 5rem);
+    color: #ECEFF4;
+    transform: translate(40%, 199%);
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    font-family: poppins;
+    z-index: 10000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    backdrop-filter: blur(2px);
+  }
+  
+  li .active {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #ECEFF4;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    font-size: 23px;
+  }
+
+  li a::after {
+    background-color: #2E3440;
+    transition: 0.9s ease-in-out .9s;
+  }
+  
+  li a:hover {
+    background-color: #2E3440;
+    transition: 0.3s ease-in-out;
+    border-radius: 3px;
+  }

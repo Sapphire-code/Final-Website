@@ -1,0 +1,49 @@
+<!--
+    Inspired by: https://www.youtube.com/watch?v=zGKNMm4L-r4
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>SapphireKR's Website</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="https://github.com/Sapphire-code?tab=repositories" target="_blank">Projects</a></li>
+          <li><a href="https://github.com/Sapphire-code" target="_blank">Github</a></li>
+          <li><a href="https://www.youtube.com/@SapphireKR" target="_blank">Youtube</a></li> 
+        </ul>
+      </nav>
+    
+    <div id="left-side" class="side">
+        <h2 class="title">
+          Hello, I am 
+          <span class="fancy">SapphireKR</span>      
+        </h2>
+      </div>
+      <div id="right-side" class="side">
+        <h2 class="title">
+          Hello, I am a
+          <span class="fancy">programmer</span>     
+        </h2>
+      </div>
+      <script>
+        const left = document.getElementById("left-side");
+
+        const handleMove = e => {
+        left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+        }
+
+        document.onmousemove = e => handleMove(e);
+
+        document.ontouchmove = e => handleMove(e.touches[0]);
+      </script>
+</body>
+</html>
